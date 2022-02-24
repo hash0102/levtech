@@ -22,7 +22,7 @@ class PostController extends Controller
         return view('create');
     }
 
-    public function store(Post $post, PostRequest $request) // 引数をRequest->PostRequestにする
+    public function store(Post $post, PostRequest $request)
     {
         $input = $request['post'];
         $post->fill($input)->save();
