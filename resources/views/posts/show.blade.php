@@ -15,8 +15,9 @@
         <div class="content">
             <div class="content__post">
                 <h3>本文</h3>
-                <p>{{ $post->body }}</p>    
+                <p>{{ $post->contents }}</p>    
                 <p class = "updated_at">{{$post->updated_at}}</p>
+                <a href="/categories/{{ $post->category->id }}">{{ $post->category->name }}</a>
             </div>
         </div>
         <div class="footer">
@@ -26,7 +27,7 @@
                 @csrf
                 @method('DELETE')
                 <input type ="submit" style = "display:none">
-                <p class = 'delete'>[<span onclick = "return deletePost(this);">削除]</span></p>
+                <button class = 'delete'><span onclick = "return deletePost(this);">削除</span></button>
             </form>
         </div>
             <script>
