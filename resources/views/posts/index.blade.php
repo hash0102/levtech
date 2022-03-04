@@ -1,3 +1,5 @@
+@extends('layouts.app')
+@section('content')
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -7,7 +9,8 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
     <body>
         <h1>Blog Name</h1>
-        <button><a href='/posts/create'>create</a></button>
+        {{Auth::user()->name}}
+        <p><button><a href='/posts/create'>create</a></button></p>
         <div class='posts'>
             @foreach ($posts as $post)
                 <div class='post'>
@@ -22,3 +25,4 @@
         </div>
     </body>
 </html>
+@endsection
