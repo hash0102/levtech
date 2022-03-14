@@ -7,6 +7,7 @@
         <title>Blog</title>
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        <link rel="stylesheet" href="{{ asset('css/index.css') }}">
     <body>
         <h1>Blog Name</h1>
         {{Auth::user()->name}}
@@ -23,6 +24,7 @@
         <div class='paginate'>
             {{ $posts->links() }}
         </div>
+        <button><a href = '/students'>クラス表へ行く</a></button>
     </body>
 </html>
 @endsection

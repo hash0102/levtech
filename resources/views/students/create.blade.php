@@ -1,4 +1,5 @@
-{{-- 学生情報のフォームと、好きな教科の選択画面 --}}
+@extends('layouts.app')
+@section('content')
 <form action="/students" method="POST">
     @csrf
     <div>
@@ -31,6 +32,6 @@
     </div>
     <input type="submit" value="保存"/>
     <button class="back"><a href="/students">戻る</a></button>
-    
 </form>
+@endsection
         

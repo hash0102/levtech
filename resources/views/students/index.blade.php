@@ -1,3 +1,5 @@
+@extends('layouts.app')
+@section('content')
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -29,7 +31,8 @@
                 </h5>
                         
             @endforeach
-            
+            <button><a href = '/' >POSTに戻る</a></button>
         </div>
     </body>
 </html>
+@endsection

@@ -1,0 +1,13 @@
+h1 {
+    font-size:50px;
+    color:blue;
+    padding-bottom: 54px;
+}
+.post {
+    color:red;
+    padding-bottom: 30px
+}
+
+.posts {
+    color:green;
+}
